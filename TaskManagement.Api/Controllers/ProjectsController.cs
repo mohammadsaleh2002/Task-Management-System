@@ -8,17 +8,27 @@ namespace TaskManagement.Api.Controllers;
 [Route("api/[controller]")]
 public class ProjectsController : ControllerBase
 {
-	private readonly ISender _sender;
+	private readonly IMediator _mediator;
 
-	public ProjectsController(ISender sender)
+	public ProjectsController(IMediator mediator)
 	{
-		_sender = sender;
+		_mediator = mediator;
 	}
 
 	[HttpPost]
 	public async Task<IActionResult> Create(CreateProjectCommand command)
 	{
-		var result = await _sender.Send(command);
+		var result = await _mediator.Send(command);
+		return Ok(result);
+	}
+
+	[HttpPost("add-member")]
+	public async Task<IActionResult> AddMember(AddMemberToProjectCommand command)
+	{
+		var result = await _mediator.Send(command);
+		if (result.Contains("not found") || result.Contains("already a member"))
+			return BadRequest(result);
+
 		return Ok(result);
 	}
 }

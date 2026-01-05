@@ -7,4 +7,5 @@ public interface IMongoDbContext
 {
     IMongoCollection<Project> Projects { get; }
     IMongoCollection<TaskItem> Tasks { get; }
+    IMongoCollection<User> Users { get; }
 }

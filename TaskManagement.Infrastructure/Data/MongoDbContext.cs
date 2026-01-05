@@ -17,4 +17,5 @@ public class MongoDbContext : IMongoDbContext
 
 	public IMongoCollection<Project> Projects => _database.GetCollection<Project>("Projects");
 	public IMongoCollection<TaskItem> Tasks => _database.GetCollection<TaskItem>("Tasks");
+	public IMongoCollection<User> Users => _database.GetCollection<User>("Users");
 }
