@@ -15,14 +15,12 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 // Configure SwaggerUI
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 
+// Enable Controller mapping (Replaces manual MapGet endpoints for a clean structure)
 app.MapControllers();
 
 app.Run();

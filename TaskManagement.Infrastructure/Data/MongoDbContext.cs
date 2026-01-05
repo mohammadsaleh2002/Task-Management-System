@@ -1,10 +1,11 @@
 using Microsoft.Extensions.Configuration;
 using MongoDB.Driver;
 using TaskManagement.Domain.Entities;
+using TaskManagement.Application.Common; 
 
 namespace TaskManagement.Infrastructure.Data;
 
-public class MongoDbContext
+public class MongoDbContext : IMongoDbContext 
 {
 	private readonly IMongoDatabase _database;
 
