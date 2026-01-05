@@ -21,6 +21,7 @@ app.UseSwaggerUI();
 app.UseHttpsRedirection();
 
 // Enable Controller mapping (Replaces manual MapGet endpoints for a clean structure)
-app.MapControllers();
+app.UseMiddleware<TaskManagement.Api.Middleware.ExceptionHandlingMiddleware>(); 
+app.MapControllers();   
 
 app.Run();
