@@ -4,15 +4,17 @@ namespace TaskManagement.Domain.Entities;
 
 public class TaskItem
 {
-    public string Id { get; set; } = Guid.NewGuid().ToString(); // string for mongo
+    public string Id { get; set; } = Guid.NewGuid().ToString();
     public string Title { get; set; } = string.Empty;
     public string Description { get; set; } = string.Empty;
     public TaskItemStatus Status { get; set; } = TaskItemStatus.ToDo;
 
-    public string? AttachmentPath { get; set; }
+    // Task is in the which Project
+    public string ProjectId { get; set; } = string.Empty;
+
+    // Task is for whoch User
+    public string AssignedUserId { get; set; } = string.Empty;
 
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public DateTime? DueDate { get; set; }
-
-    public string ProjectId { get; set; } = string.Empty;
 }
