@@ -21,4 +21,17 @@ public class UsersController : ControllerBase
         var userId = await _mediator.Send(command);
         return Ok(new { UserId = userId, Message = "User created successfully" });
     }
+
+    [HttpPost("login")]
+    public async Task<IActionResult> Login(LoginCommand command)
+    {
+        var result = await _mediator.Send(command);
+
+        if (result.StartsWith("Error"))
+        {
+            return Unauthorized(result);
+        }
+
+        return Ok(new { Token = result });
+    }
 }
