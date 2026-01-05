@@ -55,6 +55,9 @@ builder.Services.AddSwaggerGen(opt =>
     });
 });
 
+
+
+builder.Services.AddHttpContextAccessor();
 var app = builder.Build();
 
 app.UseMiddleware<TaskManagement.Api.Middleware.ExceptionHandlingMiddleware>();

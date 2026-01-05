@@ -1,9 +1,11 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using TaskManagement.Application.Tasks.Commands;
+using Microsoft.AspNetCore.Authorization; 
 
 namespace TaskManagement.Api.Controllers;
 
+[Authorize] 
 [ApiController]
 [Route("api/[controller]")]
 public class TasksController : ControllerBase
