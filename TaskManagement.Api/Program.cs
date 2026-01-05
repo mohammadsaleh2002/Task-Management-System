@@ -4,8 +4,12 @@ using Microsoft.OpenApi.Models;
 using System.Text;
 using TaskManagement.Application;
 using TaskManagement.Infrastructure;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Host.UseSerilog((context, configuration) =>
+    configuration.ReadFrom.Configuration(context.Configuration));
 
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure();
@@ -27,7 +31,6 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     });
 
 builder.Services.AddAuthorization();
-
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
@@ -55,18 +58,14 @@ builder.Services.AddSwaggerGen(opt =>
     });
 });
 
-
-
-builder.Services.AddHttpContextAccessor();
 var app = builder.Build();
 
+app.UseSerilogRequestLogging();
 
 app.UseMiddleware<TaskManagement.Api.Middleware.ExceptionHandlingMiddleware>();
 
-
 app.UseSwagger();
 app.UseSwaggerUI();
-
 
 app.UseHttpsRedirection();
 
