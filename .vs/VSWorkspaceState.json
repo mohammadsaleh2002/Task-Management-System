@@ -1,7 +1,15 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\TaskManagement.Api",
+    "\\TaskManagement.Application\\Common\\Interfaces",
+    "\\TaskManagement.Application\\Projects\\Commands",
+    "\\TaskManagement.Application\\Tasks\\Commands",
+    "\\TaskManagement.Application\\Users\\Commands",
+    "\\TaskManagement.Domain\\Entities",
+    "\\TaskManagement.Domain\\Enums",
+    "\\TaskManagement.Infrastructure\\Authentication"
   ],
-  "SelectedNode": "\\C:\\Users\\Mohammad-Saleh\\Desktop\\ASP Project",
+  "SelectedNode": "\\TaskManagement.Api\\appsettings.json",
   "PreviewInSolutionExplorer": false
 }

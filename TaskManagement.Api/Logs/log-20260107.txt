@@ -1,0 +1,56 @@
+2026-01-07 06:08:19.567 +03:30 [ERR] Hosting failed to start
+System.InvalidOperationException: Unable to configure HTTPS endpoint. No server certificate was specified, and the default developer certificate could not be found or is out of date.
+To generate a developer certificate run 'dotnet dev-certs https'. To trust the certificate (Windows and macOS only) run 'dotnet dev-certs https --trust'.
+For more information on configuring HTTPS see https://go.microsoft.com/fwlink/?linkid=848054.
+   at Microsoft.AspNetCore.Hosting.ListenOptionsHttpsExtensions.UseHttps(ListenOptions listenOptions, Action`1 configureOptions)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2026-01-07 06:08:38.780 +03:30 [INF] HTTP GET /swagger responded 301 in 5.9102 ms
+2026-01-07 06:08:38.897 +03:30 [INF] HTTP GET /swagger/index.html responded 200 in 56.6034 ms
+2026-01-07 06:08:38.954 +03:30 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 44.2706 ms
+2026-01-07 06:08:38.954 +03:30 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 43.3856 ms
+2026-01-07 06:08:38.954 +03:30 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 42.9112 ms
+2026-01-07 06:08:38.979 +03:30 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 4.3188 ms
+2026-01-07 06:08:38.998 +03:30 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 22.4385 ms
+2026-01-07 06:08:39.134 +03:30 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 6.3105 ms
+2026-01-07 06:08:39.147 +03:30 [INF] HTTP GET /swagger/favicon-32x32.png responded 200 in 0.3046 ms
+2026-01-07 06:09:02.715 +03:30 [WRN] Failed to determine the https port for redirect.
+2026-01-07 06:09:02.820 +03:30 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-01-07 06:09:03.173 +03:30 [ERR] HTTP POST /api/Projects responded 500 in 463.4505 ms
+2026-01-07 06:10:52.219 +03:30 [INF] HTTP GET /swagger/index.html responded 200 in 59.3490 ms
+2026-01-07 06:10:52.390 +03:30 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 5.8042 ms
+2026-01-07 06:11:25.981 +03:30 [WRN] Failed to determine the https port for redirect.
+2026-01-07 06:11:26.063 +03:30 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-01-07 06:11:26.213 +03:30 [ERR] HTTP POST /api/Users responded 500 in 238.2653 ms
+2026-01-07 06:11:57.102 +03:30 [INF] HTTP GET /swagger/index.html responded 200 in 56.7696 ms
+2026-01-07 06:11:57.184 +03:30 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 5.3239 ms
+2026-01-07 06:12:02.552 +03:30 [WRN] Failed to determine the https port for redirect.
+2026-01-07 06:12:02.612 +03:30 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-01-07 06:12:02.721 +03:30 [INF] HTTP POST /api/Users responded 400 in 173.8757 ms
+2026-01-07 06:12:14.615 +03:30 [ERR] HTTP POST /api/Users responded 500 in 79.6746 ms
+2026-01-07 06:13:02.829 +03:30 [INF] HTTP GET /swagger/index.html responded 200 in 55.3185 ms
+2026-01-07 06:13:02.911 +03:30 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 5.3618 ms
+2026-01-07 06:13:30.573 +03:30 [WRN] Failed to determine the https port for redirect.
+2026-01-07 06:13:30.678 +03:30 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-01-07 06:13:30.801 +03:30 [INF] HTTP POST /api/Users responded 400 in 233.4316 ms
+2026-01-07 06:13:39.879 +03:30 [ERR] HTTP POST /api/Users responded 500 in 334.2766 ms
+2026-01-07 06:14:11.937 +03:30 [INF] HTTP GET /swagger/index.html responded 200 in 113.1278 ms
+2026-01-07 06:14:12.050 +03:30 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 5.5616 ms
+2026-01-07 06:14:37.861 +03:30 [WRN] Failed to determine the https port for redirect.
+2026-01-07 06:14:37.943 +03:30 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-01-07 06:14:38.096 +03:30 [ERR] HTTP POST /api/Users responded 500 in 242.1686 ms
+2026-01-07 06:15:50.783 +03:30 [INF] HTTP GET /swagger/index.html responded 200 in 56.2044 ms
+2026-01-07 06:15:50.869 +03:30 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 5.3116 ms
+2026-01-07 06:16:07.101 +03:30 [WRN] Failed to determine the https port for redirect.
+2026-01-07 06:16:07.211 +03:30 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-01-07 06:16:07.595 +03:30 [ERR] HTTP POST /api/Users responded 500 in 500.9308 ms
+2026-01-07 06:19:46.455 +03:30 [INF] HTTP GET /swagger/index.html responded 200 in 103.0369 ms
+2026-01-07 06:19:46.579 +03:30 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 7.4980 ms
+2026-01-07 06:20:06.892 +03:30 [WRN] Failed to determine the https port for redirect.
+2026-01-07 06:20:06.980 +03:30 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-01-07 06:20:08.417 +03:30 [INF] HTTP POST /api/Users responded 200 in 1531.3093 ms
