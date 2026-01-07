@@ -1,7 +1,8 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using TaskManagement.Application.Tasks.Commands;
-using Microsoft.AspNetCore.Authorization; 
+using Microsoft.AspNetCore.Authorization;
+using TaskManagement.Application.Tasks.Queries;
 
 namespace TaskManagement.Api.Controllers;
 
@@ -25,5 +26,11 @@ public class TasksController : ControllerBase
             return BadRequest(result);
 
         return Ok(result);
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> GetAll()
+    {
+        return Ok(await _mediator.Send(new GetAllTasksQuery()));
     }
 }

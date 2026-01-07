@@ -1,6 +1,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using TaskManagement.Application.Projects.Commands;
+using TaskManagement.Application.Projects.Queries;
 
 namespace TaskManagement.Api.Controllers;
 
@@ -31,4 +32,11 @@ public class ProjectsController : ControllerBase
 
 		return Ok(result);
 	}
+
+
+    [HttpGet]
+    public async Task<IActionResult> GetAll()
+    {
+        return Ok(await _mediator.Send(new GetAllProjectsQuery()));
+    }
 }

@@ -1,6 +1,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using TaskManagement.Application.Users.Commands;
+using TaskManagement.Application.Users.Queries;
 
 
 namespace TaskManagement.Api.Controllers;
@@ -34,5 +35,11 @@ public class UsersController : ControllerBase
         }
 
         return Ok(new { Token = result });
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> GetAll()
+    {
+        return Ok(await _mediator.Send(new GetAllUsersQuery()));
     }
 }
