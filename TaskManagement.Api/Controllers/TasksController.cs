@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using TaskManagement.Application.Tasks.Commands;
 using Microsoft.AspNetCore.Authorization;
 using TaskManagement.Application.Tasks.Queries;
+using TaskManagement.Domain.Enums;
 
 namespace TaskManagement.Api.Controllers;
 
@@ -33,4 +34,18 @@ public class TasksController : ControllerBase
     {
         return Ok(await _mediator.Send(new GetAllTasksQuery()));
     }
+
+
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetById(string id)
+    => Ok(await _mediator.Send(new GetTaskByIdQuery(id)));
+
+    [HttpPatch("{id}/status")]
+    public async Task<IActionResult> UpdateStatus(string id, [FromBody] TaskItemStatus status)
+        => await _mediator.Send(new UpdateTaskStatusCommand(id, status)) ? Ok() : NotFound();
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(string id)
+        => await _mediator.Send(new DeleteTaskCommand(id)) ? NoContent() : NotFound();
+
 }

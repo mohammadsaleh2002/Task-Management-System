@@ -59,3 +59,25 @@ For more information on configuring HTTPS see https://go.microsoft.com/fwlink/?l
 2026-01-07 06:50:24.578 +03:30 [WRN] Failed to determine the https port for redirect.
 2026-01-07 06:50:24.642 +03:30 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
 2026-01-07 06:50:54.982 +03:30 [ERR] HTTP GET /api/Users responded 500 in 30409.1655 ms
+2026-01-07 06:56:18.320 +03:30 [INF] HTTP GET /swagger/index.html responded 200 in 84.4265 ms
+2026-01-07 06:56:18.442 +03:30 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 7.1042 ms
+2026-01-07 06:56:43.216 +03:30 [WRN] Failed to determine the https port for redirect.
+2026-01-07 06:56:43.299 +03:30 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-01-07 06:57:13.703 +03:30 [ERR] HTTP POST /api/Users/login responded 500 in 30494.7851 ms
+2026-01-07 07:06:31.379 +03:30 [INF] HTTP POST /api/Users/login responded 200 in 1025.3639 ms
+2026-01-07 07:06:45.933 +03:30 [INF] HTTP GET /api/Users responded 200 in 154.9051 ms
+2026-01-07 07:07:17.255 +03:30 [INF] HTTP GET /api/Tasks responded 401 in 16.4400 ms
+2026-01-07 07:10:54.445 +03:30 [INF] HTTP GET /api/Tasks responded 200 in 252.5876 ms
+2026-01-07 07:12:33.549 +03:30 [INF] HTTP GET /swagger/index.html responded 200 in 78.3531 ms
+2026-01-07 07:12:33.662 +03:30 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 6.3823 ms
+2026-01-07 07:19:43.290 +03:30 [INF] HTTP GET /swagger/index.html responded 200 in 75.8687 ms
+2026-01-07 07:19:43.404 +03:30 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 7.7099 ms
+2026-01-07 07:20:52.832 +03:30 [WRN] Failed to determine the https port for redirect.
+2026-01-07 07:20:52.899 +03:30 [INF] HTTP GET /api/Tasks/887f8440-97d5-483a-b6ef-578dcbd16a31 responded 401 in 72.5534 ms
+2026-01-07 07:28:40.005 +03:30 [INF] HTTP GET /swagger/index.html responded 200 in 87.9404 ms
+2026-01-07 07:28:40.145 +03:30 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 9.8204 ms
+2026-01-07 07:40:18.618 +03:30 [INF] HTTP GET /swagger/index.html responded 200 in 79.3611 ms
+2026-01-07 07:40:18.745 +03:30 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 8.5888 ms
+2026-01-07 07:40:39.066 +03:30 [WRN] Failed to determine the https port for redirect.
+2026-01-07 07:40:39.134 +03:30 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-01-07 07:40:41.359 +03:30 [INF] HTTP DELETE /api/Users/ddd responded 404 in 2298.3880 ms

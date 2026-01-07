@@ -39,4 +39,28 @@ public class ProjectsController : ControllerBase
     {
         return Ok(await _mediator.Send(new GetAllProjectsQuery()));
     }
+
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(string id)
+    {
+        var result = await _mediator.Send(new DeleteProjectCommand(id));
+        return result ? NoContent() : NotFound();
+    }
+
+
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update(string id, [FromBody] UpdateProjectRequest request)
+    {
+        var command = new UpdateProjectCommand(id, request.Name, request.Description);
+
+        var result = await _mediator.Send(command);
+
+        if (!result) return NotFound("Cannot Find Project");
+
+        return Ok("Yeah We Update Project !");
+    }
+
+    public record UpdateProjectRequest(string Name, string? Description);
+
 }
