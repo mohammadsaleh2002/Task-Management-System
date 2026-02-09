@@ -276,7 +276,7 @@ In Swagger UI, click the **Authorize** button and enter your token to authentica
 
 This project was developed collaboratively by two programmers, each taking on distinct roles and responsibilities:
 
-### mohammadsaleh2002 (Mohammad Saleh) — Backend Lead & Core Developer
+### mohammadsaleh2002 (Mohammad Saleh Mostafaei) 
 
 **Role:** Led the overall backend development, project architecture, database integration, authentication system, and API implementation.
 
@@ -296,7 +296,7 @@ This project was developed collaboratively by two programmers, each taking on di
 
 ---
 
-### saberghm (Saber) — Domain Design & Validation Engineer
+### saberghm (Saber Gholami) 
 
 **Role:** Focused on domain modeling, input validation, error handling, and logging infrastructure.
 
